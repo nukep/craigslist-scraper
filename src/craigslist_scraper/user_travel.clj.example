@@ -12,5 +12,7 @@
 
 (defn travel-from-lat-lng [lat lng]
   (let [home (str lat "," lng)]
-    {:granville-to-yvr {:from granville :to yvr :arrive-at arrive-9am}
-     :yvr-to-granville {:from yvr :to granville :arrive-at arrive-6pm}}))
+    {:home-to-yvr {:from home :to yvr :arrive-at arrive-9am}
+     :yvr-to-home {:from yvr :to home :arrive-at arrive-6pm}
+     :home-to-granville {:from home :to granville :arrive-at arrive-9am}
+     :granville-to-home {:from granville :to home :arrive-at arrive-6pm}}))
