@@ -1,0 +1,16 @@
+(ns craigslist-scraper.user-travel
+  (require [clj-time.format :as f]
+           [clj-time.coerce :as c]))
+
+(def granville "Granville Island, Vancouver, BC, Canada")
+(def yvr "Vancouver International Airport (YVR), 3211 Grant McConachie Way, Richmond, BC V7B 0A4, Canada")
+(def arrive-9am (c/to-epoch (f/parse "2017-12-01T09:00:00-0800")))
+(def arrive-6pm (c/to-epoch (f/parse "2017-12-01T18:00:00-0800")))
+
+(defn travel-keys [] [:granville-to-yvr
+                      :yvr-to-granville])
+
+(defn travel-from-lat-lng [lat lng]
+  (let [home (str lat "," lng)]
+    {:granville-to-yvr {:from granville :to yvr :arrive-at arrive-9am}
+     :yvr-to-granville {:from yvr :to granville :arrive-at arrive-6pm}}))

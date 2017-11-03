@@ -1,0 +1,7 @@
+# I have downloads of real posts here, but I don't want to include them in the repo
+# because they contain content people may not want on the internet anymore.
+# I'll work on mocking up some pages for the tests, but for now I'm ignoring the
+# ones that I have.
+
+posting-*.html
+craigslist_test.clj

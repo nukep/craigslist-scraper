@@ -1,0 +1,9 @@
+{:googlesheets {:oauth2-client-id ""
+                :oauth2-client-secret ""
+                ;; The Google Sheets ID to add postings to.
+                ;; It must be one that the user who authenticates has access to.
+                :sheet-id ""}
+ :googlemaps {:api-key ""}
+ ;; The user agent we should use to scrape Craigslist.
+ ;; A user agent from a real browser probably makes it less likely to get blocked.
+ :user-agent ""}
